@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<link rel="icon" href="data:;base64,="> 
+    <head>
+        <meta charset="utf-8">
+        <title>AXA REV &raquo; MCC Dashboard</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+
+        <!-- Dashboard -->
+        <link rel="stylesheet" type="text/css" href="../static/lib/css/keen-dashboards.css" />
+
+        <!-- dc.js rendering -->
+        <link rel="stylesheet" href="../static/lib/css/dc.css">
+        <link rel="stylesheet" href="./static/css/custom.css">
+        <!-- <link rel="stylesheet" type="text/css" href="../static/lib/css/bootstrap.min.css"> -->
+    </head>
+
+    <body class="keen-dashboard">
+        <div class="container grid grid-thirds">
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Credit Limit 
+                </div>
+                
+                <div class="chart-stage">
+                    <div id="creditDistrib"></div>
+                    <div id="cash"></div>
+                    
+                </div>
+                
+                <div class="chart-notes"></div>
+            </div>
+            
+<!-- COMMENTED AS THERE IS NO TARGET IN THIS SNAPSHOT
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Map of the Philippines - Positive targets
+                </div>
+                <div class="chart-stage" id="state-map"></div>
+                <div class="chart-notes"></div>
+            </div>
+ -->
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Map of the Philippines - People count
+                </div>
+                <div class="chart-stage">
+                    <div>
+                        <div id="state-map-count"></div>
+                        <div>
+                            Select deciles:
+                            <div id="quantileRank"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-notes">
+                </div>
+                <!--
+<select id="mapType" onchange="javascript:phMap_count.redraw();">
+<option value="trgt">Target</option>
+<option value="pplCnt">People count</option>
+</select>
+-->
+            </div>
+
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Age groups and number of years since first account opening
+                </div>
+                <div class="chart-stage">
+                    <div>
+                        <div id="age-groups"></div>
+                        <div id="acct-day-open"></div>
+                    </div>
+                </div>
+
+                <div class="chart-notes"></div>
+            </div>
+
+            
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Marital Status and Customer Classification 
+                </div>
+                <div class="chart-stage" >
+                    <div>
+                        <div id="pie-marital-status"></div>
+                        <!-- NO TARGET IN THIS SNAPSHOT
+                        <div id="target">
+                            Select the target: 
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <div class="chart-notes">
+                    <div>
+                        <div id="risk-status"></div>
+                        <div id="unsupSeg"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Predictions and Average Score versus Average Age per Behavioral Category
+                </div>
+                <div class="chart-stage" id="score"></div>
+                <div class="dc-data-count">
+                    <span class="filter-count"></span>
+                    selected out of 
+                    <span class="total-count"></span> 
+                    records.
+                </div>
+                <div class="chart-notes">
+                    
+                    <div id="risk-bubble-chart"></div>
+                </div>
+            </div>
+
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Number of Classic and Platinum Cards
+                </div>
+                <div class="chart-stage">
+                    <div id="nbClassCard"></div>
+                    <div id="nbPlatiCard"></div>
+                </div>
+                <div class="chart-notes"></div>
+            </div>
+
+            
+                        
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Median of Monthly transactions over the last year and Child Expenses
+                </div>
+                <div class="chart-stage">
+                    <div id="medExp"></div>
+                    <div id="childExp"></div>
+                </div>
+                <div class="chart-notes"></div>
+            </div>
+
+            <div class="chart-wrapper">
+                <div class="chart-title">
+                    Pharmacy and Auto Expenses for the current month
+                </div>
+                <div class="chart-stage">
+                    <div id="pharmExp"></div>
+                    <div id="autoExp"></div>
+                </div>
+                <div class="chart-notes"></div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <p class="small text-muted">Built with &#9829; by AXA REV</p>
+        </div>
+
+        <script src="../static/lib/js/crossfilter.js"></script>
+        <script src="../static/lib/js/d3.js"></script>
+        <script src="../static/lib/js/dc.js"></script>
+        <script src="../static/js/graphs.js"></script>
+    </body>
+</html>

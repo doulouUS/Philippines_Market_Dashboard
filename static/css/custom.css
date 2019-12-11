@@ -1,0 +1,48 @@
+#pie_chart_delays{
+    font-size: 60px;
+}
+
+body {
+    margin-left:20px
+}
+
+.container {
+   margin-left: 20px;
+}
+
+.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}
+
+/* For x-label rotation */
+#creditDistrib .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(0deg);
+}
+
+/* For x-label rotation */
+#destination_count .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-90deg);
+}
+
+.pictureframe {
+    display: inline-block;
+}
+
+  .dc-cbox-group {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  .dc-cbox-group label {
+    display: inline-block;
+  }
+  .dc-cbox-group input[type=checkbox], .dc-cbox-group input[type=radio] {
+    margin: 0 5px 5px 5px;
+  }
+
+.dc-data-count {
+    font-size: 20px;
+}
+
