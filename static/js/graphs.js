@@ -5,7 +5,7 @@ queue()
     .await(makeGraphs);
 */
 var dataCount = 0;
-d3.csv("static/data/app_dummy_data.csv").then(function(dataCsv){
+d3.csv("static/data/app_data_201904.csv").then(function(dataCsv){
     //Clean dataCsv data
     var dataCsvInitial = dataCsv;
 
@@ -79,31 +79,31 @@ d3.csv("static/data/app_dummy_data.csv").then(function(dataCsv){
     //var minTran = Math.floor(totTran12Dim.bottom(1)[0]["tot_tran_amt_12"]);
     //var maxTran = 2000000;  //Math.floor(totTran12Dim.top(1)[0]["tot_tran_amt_12"]);
     var minCredLim = Math.floor(accCredLimDim.bottom(1)[0]["acct_curr_crlimit"]);
-    var maxCredLim = 2000000;  //Math.floor(accCredLimDim.top(1)[0]["acct_curr_crlimit"]);
+    var maxCredLim = Math.floor(accCredLimDim.top(1)[0]["acct_curr_crlimit"]);  //2000000
 
     var minCash = 0;  // accCashDim.bottom(1)[0]["acct_avail_cash"];
-    var maxCash = 1.5e6;  //accCashDim.top(1)[0]["acct_avail_cash"];
+    var maxCash = accCashDim.top(1)[0]["acct_avail_cash"];  //1.5e6;  
 
-    var minAcctDays = acctOpenDaysDim.bottom(1)[0]["acct_dayssince_first_acct_open"]/365.25;
+    var minAcctDays = 0;  //acctOpenDaysDim.bottom(1)[0]["acct_dayssince_first_acct_open"]/365.25;
     var maxAcctDays = acctOpenDaysDim.top(1)[0]["acct_dayssince_first_acct_open"]/365.25;
 
     var minMedExp = 1; //medExpDim.bottom(1)[0]["med_monthly_tran_amt_12_effective"];
-    var maxMedExp = 2e6;  // medExpDim.top(1)[0]["med_monthly_tran_amt_12_effective"];
+    var maxMedExp = medExpDim.top(1)[0]["med_monthly_tran_amt_12_effective"];  // 2e6;  // 
 
     var minChildExp = 1; //childExpDim.bottom(1)[0]["tot_tran_amt_child_effective"];
-    var maxChildExp = 25e3;  //childExpDim.top(1)[0]["tot_tran_amt_child_effective"];
+    var maxChildExp = childExpDim.top(1)[0]["tot_tran_amt_child_effective"];  //25e3;  //
 
     var minPharmExp = 1; //pharmExpDim.bottom(1)[0]["tot_tran_amt_pharm_hosp_effective"];
-    var maxPharmExp = 4e5;  //pharmExpDim.top(1)[0]["tot_tran_amt_pharm_hosp_effective"];
+    var maxPharmExp = pharmExpDim.top(1)[0]["tot_tran_amt_pharm_hosp_effective"];  //4e5;  
 
     var minAutoExp = 1;  //autoExpDim.bottom(1)[0]["tot_tran_amt_auto_effective"];
-    var maxAutoExp = 7e5;  //autoExpDim.top(1)[0]["tot_tran_amt_auto_effective"];
+    var maxAutoExp = autoExpDim.top(1)[0]["tot_tran_amt_auto_effective"];  //7e5;  
 
     var minNbClassCard = nbClassCardDim.bottom(1)[0]["acct_num_cards_classic_12"];
-    var maxNbClassCard = 70;  //nbClassCardDim.top(1)[0]["acct_num_cards_classic_12"];
+    var maxNbClassCard = nbClassCardDim.top(1)[0]["acct_num_cards_classic_12"]; //70;
 
     var minNbPlatiCard = 1;  //nbPlatiCardDim.bottom(1)[0]["acct_num_cards_platinum_12"];
-    var maxNbPlatiCard = 50;  //nbPlatiCardDim.top(1)[0]["acct_num_cards_platinum_12"];
+    var maxNbPlatiCard = nbPlatiCardDim.top(1)[0]["acct_num_cards_platinum_12"];  // 50; 
 
     //--------------- Calculate Groups
     var maritalGrp = maritalDim.group();
