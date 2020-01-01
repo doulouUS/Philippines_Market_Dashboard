@@ -5,7 +5,7 @@ queue()
     .await(makeGraphs);
 */
 var dataCount = 0;
-d3.csv("static/data/app_data_201904.csv").then(function(dataCsv){
+d3.csv("static/data/app_dummy_data.csv").then(function(dataCsv){
     //Clean dataCsv data
     var dataCsvInitial = dataCsv;
 

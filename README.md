@@ -31,3 +31,11 @@ Fire the application and go to your browser on [http://0.0.0.0:5000/](http://0.0
 ```
 python app.py
 ```
+
+## Quick setup using Docker
+
+Pull it and launch the container 
+
+```
+docker run ???
+```
