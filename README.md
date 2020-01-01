@@ -34,8 +34,12 @@ python app.py
 
 ## Quick setup using Docker
 
-Pull it and launch the container 
-
+Pull from Docker hub
 ```
-docker run ???
+docker pull doulou74/dashboard_viewer
+```
+
+Run the image locally on port 5000
+```
+docker run --rm -d -p 5000:5000/tcp dashboard_viewer:0.1
 ```
