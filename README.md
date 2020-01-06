@@ -41,5 +41,5 @@ docker pull doulou74/dashboard_viewer:0.1
 
 Run the image locally on port 5000
 ```
-docker run --rm -d -p 5000:5000/tcp dashboard_viewer:0.1
+docker run --rm -d -p 5000:5000/tcp doulou74/dashboard_viewer:0.1
 ```
