@@ -36,7 +36,7 @@ python app.py
 
 Pull from Docker hub
 ```
-docker pull doulou74/dashboard_viewer
+docker pull doulou74/dashboard_viewer:0.1
 ```
 
 Run the image locally on port 5000
