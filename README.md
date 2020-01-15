@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 Fire the application and go to your browser on [http://0.0.0.0:5000/](http://0.0.0.0:5000/)
 ```
-python app.py
+python run_flask_app.py
 ```
 
 ## Quick setup using Docker
