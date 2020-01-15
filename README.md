@@ -2,6 +2,8 @@
 
 # Interactive dashboard
 
+![Dashboard Screenshot](static/images/example_image.png)
+
 This repository deploys a basic app to explore a dataset using interactive visualizations.
 The backend uses Python with `Flask`, while the data filtering and visualization
 capabilities are handled by `crossfilter.js` and `dc.js` respectively. The dashboard itself is
