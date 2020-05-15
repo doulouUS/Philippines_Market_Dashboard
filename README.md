@@ -4,10 +4,12 @@
 
 ![Dashboard Screenshot](static/images/example_image.png)
 
-This repository deploys a basic app to explore a dataset using interactive visualizations.
+This repository deploys an app to explore a dataset using interactive visualizations.
 The backend uses Python with `Flask`, while the data filtering and visualization
 capabilities are handled by `crossfilter.js` and `dc.js` respectively. The dashboard itself is
 built from a [keen.io](https://github.com/keen/dashboards) template.
+
+The dashboard is able to seamlessly handle more than 800,000 rows (customers) for about 20 columns (attributes).
 
 This project has been implemented using `Python 3.7.0`.
 
